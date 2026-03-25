@@ -6,13 +6,19 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #fff;
+    background-color: #F7FAFC;
+    
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
     width: 100%;
     border-bottom: 1px solid #E3E8EE;
     padding: 20px 0;
+    background-color: white;
 }
 
 /* Centers the content on desktop */
@@ -23,6 +29,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    background-color: white;
 }
 
 /* Logo */
@@ -41,6 +48,8 @@ header {
     border-radius: 6px;
     overflow: hidden;
 }
+
+
 
 .search-input {
     flex: 1;
@@ -66,6 +75,16 @@ header {
     padding: 0 25px;
     cursor: pointer;
     font-weight: 500;
+}
+.search-btn:hover, 
+.btn-blue:hover, 
+.newsletter button:hover {
+    background-color: #0056b3; /* Darker blue */
+    transition: 0.3s;
+}
+
+.banner-btn:hover {
+    background-color: #eeeeee;
 }
 
 /* Action Icons Group */
@@ -135,9 +154,229 @@ header {
     color: #1C1C1C;
 }
 
+/* Sidebar default state (Screen se bahar) */
+/* 1. Main Sidebar Container */
+.category-sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 280px; /* Width thori kam rakhi hai professional look ke liye */
+    height: 100vh;
+    background: #ffffff;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    padding: 0; /* Padding header aur list mein alag se denge */
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Sidebar Header (Heading aur Close Button) */
+.sidebar-header {
+    padding: 20px;
+    background: #F7F7F7;
+    border-bottom: 1px solid #E3E8EE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin: 0;
+}
+
+/* 3. Close Button styling */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #8B96A5;
+    cursor: pointer;
+}
+
+/* 4. Navigation Links Styling */
+.sidebar-list {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.sidebar-list li {
+    transition: background 0.2s;
+}
+
+.sidebar-list li:hover {
+    background: #E5F1FF; /* Hover par light blue effect */
+}
+
+.sidebar-list li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #505050; /* Dark grey text */
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sidebar-list li a:hover {
+    color: #0D6EFD; /* Hover par brand blue color */
+}
+
+/* Jab Sidebar open ho (Active class) */
+.category-sidebar.active {
+    left: 0;
+}
+
+/* Background Overlay (Taki piche ka content dark ho jaye) */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1500;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
 .text-bold {
     font-weight: 600;
 }
+
+.hero-section {
+    background-color: #F7FAFC; /* Light grey background for the body */
+    padding: 20px 0;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 250px 1fr 200px; /* Three columns */
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+}
+
+/* Sidebar Styling */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #505050;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.sidebar li.active {
+    background-color: #E5F1FF;
+    font-weight: 600;
+    color: #1C1C1C;
+}
+
+.sidebar li:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+.sidebar li {
+    transition: 0.2s;
+}
+
+.sidebar li:hover {
+    background-color: #E5F1FF; /* Light blue background */
+    color: #0D6EFD;            /* Blue text */
+}
+
+/* Keep active item consistent */
+.sidebar li.active {
+    background-color: #E5F1FF;
+    color: #1C1C1C;
+    font-weight: 600;
+}
+
+/* Main Banner Styling */
+.main-banner {
+    background-color: #AFDED8; /* Matches the teal in your image */
+    background-image: url('assets/Image/backgrounds/Banner-board-800x420\ 2.png'); /* Replace with your image */
+    background-size: cover;
+    background-position: right center;
+    border-radius: 6px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-content p { font-size: 18px; margin-bottom: 5px; }
+.banner-content h2 { font-size: 32px; margin-bottom: 20px; font-weight: 700; }
+
+.banner-btn {
+    width: fit-content;
+    padding: 10px 20px;
+    background: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Right Side Cards */
+.right-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-card {
+    background-color: #E3F0FF;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.user-info { display: flex; gap: 10px; margin-bottom: 10px; font-size: 14px; }
+.avatar { border-radius: 50%; }
+
+.btn-blue {
+    width: 100%;
+    background: #0D6EFD;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.btn-white {
+    width: 100%;
+    background: white;
+    color: #0D6EFD;
+    border: 1px solid #E3E8EE;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.promo-card {
+    padding: 15px;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+}
+
+.promo-card.orange { background-color: #F38332; }
+.promo-card.teal { background-color: #55BDC3; }
 
 /* Icon Styles */
 .dropdown-small {
@@ -210,6 +449,102 @@ header {
     display: block;
     width: 100%;
 }
+
+.deals-container {
+    display: flex;
+    background: #fff;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.deals-info {
+    padding: 20px;
+    border-right: 1px solid #E3E8EE;
+    min-width: 250px;
+}
+
+.countdown { display: flex; gap: 6px; margin-top: 15px; }
+
+.time-box {
+    background: #606060;
+    color: #fff;
+    width: 45px;
+    height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.deals-products {
+    display: flex;
+    flex: 1;
+}
+
+/* --- Centering Product Content --- */
+.deal-item, .product-card, .grid-item {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;    /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    text-align: center;      /* Ensures text lines wrap and stay centered */
+    padding: 20px;
+    height: 100%;            /* Ensures all cards in a row have equal height */
+}
+
+/* --- Product Name Styling --- */
+.deal-item p, .product-card p {
+    margin: 10px 0 5px 0;    /* Adds consistent spacing around the name */
+    font-size: 14px;
+    color: #1C1C1C;
+    width: 100%;             /* Ensures text stays within card boundaries */
+}
+
+/* --- Sale Badge Centering --- */
+.badge, .discount-badge {
+    display: inline-block;   /* Allows the badge to sit centered like text */
+    margin-top: auto;        /* Pushes the badge to the bottom of the card if needed */
+    background: #FFE3E3;
+    color: #EB001B;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* --- Image Fix --- */
+.deal-item img, .product-card img {
+    max-width: 100%;
+    height: 140px;           /* Keeps all product images at a uniform height */
+    object-fit: contain;     /* Prevents images from stretching */
+    margin-bottom: 10px;
+}
+
+/* --- Countdown Bold Numbers & Normal Text --- */
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #606060;
+    color: white;
+    width: 45px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.time-box .num {
+    font-weight: 700;    /* Bold numbers */
+    font-size: 16px;
+    line-height: 1;
+}
+
+.time-box .label {
+    font-weight: 400;    /* Normal (not bold) text */
+    font-size: 11px;
+    margin-top: 2px;
+}
 /* Newsletter Section */
 .newsletter {
     background-color: #EFF2F4;
@@ -265,6 +600,8 @@ header {
     font-weight: 500;
 }
 
+
+
 /* Main Footer Content */
 .footer-main {
     background-color: #fff;
@@ -313,6 +650,18 @@ header {
     justify-content: center;
 }
 
+.social-links a:hover i,
+.social-links a:hover span {
+    background-color: #0D6EFD; /* Changes the circle to blue */
+    color: white;              /* Keeps the icon white */
+    transition: background-color 0.3s ease; /* Makes it look smooth */
+}
+
+.footer-col ul li a:hover {
+    color: #0D6EFD;        /* Changes to Brand Blue on hover */
+    transform: translateX(5px); 
+}
+
 .app-col img { width: 120px; display: block; margin-bottom: 10px; }
 
 /* Bottom Bar */
@@ -341,3 +690,1332 @@ header {
     text-decoration: none;
     border: none; /* Sometimes themes use bottom borders instead of underlines */
 }
+
+
+/* Container outside the white box to show body background */
+.home-outdoor-section {
+    background-color: #F7FAFC;
+    padding: 20px 0;
+}
+
+/* The white box container */
+.category-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    display: flex; /* Flexbox for side banner and products */
+    overflow: hidden;
+}
+
+/* Left Side Banner */
+.side-banner {
+    width: 280px;
+    padding: 25px;
+    background: url('assets/Image/backgrounds/Group\ 969.png') no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-banner h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1C1C1C;
+}
+
+.source-btn {
+    width: fit-content;
+    padding: 10px 16px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Product Flex Grid */
+.product-flex-grid {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to go to the next line */
+}
+
+.product-item {
+    flex: 0 0 25%; /* Exactly 4 items per row */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-left: 1px solid #E3E8EE;
+    border-bottom: 1px solid #E3E8EE;
+    box-sizing: border-box;
+    height: 127px;
+    transition: background 0.2s;
+}
+
+.product-item:hover {
+    background-color: #F7F8F9;
+}
+
+/* Item details inside each box */
+.item-details .title {
+    font-size: 14px;
+    color: #1C1C1C;
+    margin-bottom: 5px;
+}
+
+.item-details .price {
+    font-size: 13px;
+    color: #8B96A5;
+}
+
+.item-details span {
+    color: #8B96A5;
+}
+
+/* Image scaling to match design */
+.product-item img {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    align-self: flex-end;
+}
+
+/* Removing bottom border for the last row */
+.product-item:nth-child(n+5) {
+    border-bottom: none;
+}
+
+.side-banner1 {
+    width: 280px;
+    padding: 25px;
+    background: url('assets/Image/backgrounds/image\ 98.png') no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inquiry-section {
+    max-width: 1180px;
+    margin: 30px auto;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.inquiry-banner-bg {
+    /* Sirf image use ho rahi hai kyunki gradient usi mein hai */
+    background: url('assets/Image/backgrounds/Group\ 982.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+}
+
+.inquiry-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Items ko upar se align karne ke liye */
+}
+
+.inquiry-text {
+    color: #ffffff;
+    padding-top: 10px;
+}
+
+.inquiry-text h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.inquiry-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Form Card Styling */
+.inquiry-card {
+    background: #ffffff;
+    width: 440px;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inquiry-card:hover {
+    transform: translateY(-5px); /* Card thoda upar uthega */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Shadow gehri ho jayegi */
+}
+
+.inquiry-card h3 {
+    font-size: 20px;
+    color: #1c1c1c;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Inputs aur Textarea ka asli state */
+.inquiry-card input, 
+.inquiry-card textarea, 
+.inquiry-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Jab mouse box ke upar jaye (Hover) */
+.inquiry-card input:hover, 
+.inquiry-card textarea:hover {
+    border-color: #127FFF; /* Blue border on hover */
+}
+
+/* Jab user box ke andar click kare (Focus) */
+.inquiry-card input:focus, 
+.inquiry-card textarea:focus {
+    border-color: #127FFF;
+    box-shadow: 0 0 0 3px rgba(18, 127, 255, 0.1); /* Blue glow effect */
+}
+
+.inquiry-card textarea {
+    height: 90px;
+    resize: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-row input {
+    flex: 2;
+}
+
+.form-row select {
+    flex: 1;
+}
+
+.blue-btn {
+    background: #127FFF;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth change ke liye */
+}
+
+/* Hover state */
+.blue-btn:hover {
+    background: #0067E0; /* Thoda dark blue */
+    box-shadow: 0px 4px 10px rgba(18, 127, 255, 0.2); /* Halki si shadow */
+}
+
+.recommended-section {
+    max-width: 1180px;
+    margin: 30px auto;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1C1C1C;
+}
+
+/* Grid Layout: Ek line mein 5 items */
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Cards ke darmiyan gap */
+}
+
+/* Individual Card Styling */
+.product-card {
+    background: #FFFFFF;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    padding: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: #127FFF;
+}
+
+/* Image Centering */
+.img-box {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Text Styling */
+.card-info .price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 5px;
+}
+
+.card-info .desc {
+    font-size: 14px;
+    color: #8B96A5;
+    line-height: 1.4;
+    /* 2 lines se zyada text ko hide karne ke liye (optional) */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.extra-services {
+    max-width: 1180px;
+    margin: 30px auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image and Icon Container */
+.service-img {
+    position: relative;
+    height: 120px;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8); /* Image ko thoda dark kiya hai taaki icon nazar aaye */
+}
+
+/* Floating Icon Box */
+.service-icon {
+    position: absolute;
+    right: 20px;
+    bottom: -25px; /* Half up, half down */
+    width: 50px;
+    height: 50px;
+    background: #D1E7FF; /* Light blue background */
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.service-icon i {
+    color: #1C1C1C;
+    font-size: 18px;
+}
+
+/* Text Body */
+.service-body {
+    padding: 20px;
+    padding-top: 30px; /* Space for the icon */
+}
+
+.service-body p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1C1C1C;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Hover Effect */
+.service-card:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-color: #127FFF;
+    cursor: pointer;
+}
+
+.service-card:hover .service-icon {
+    background: #127FFF;
+}
+
+.service-card:hover .service-icon i {
+    color: #FFFFFF;
+}
+
+.region-section {
+    max-width: 1180px;
+    margin: 40px auto;
+    padding-bottom: 40px;
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns layout */
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+.region-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Flag image styling */
+.flag-icon {
+    width: 28px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 2px; /* Halki si rounding */
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.1); /* Subtle border effect */
+}
+
+.region-info .country {
+    font-size: 16px;
+    color: #1C1C1C;
+    margin: 0;
+}
+
+.region-info .site {
+    font-size: 13px;
+    color: #8B96A5; /* Figma standard gray */
+    margin: 0;
+}
+
+/* Hover effect on the whole item */
+.region-item:hover .country {
+    color: #127FFF;
+    cursor: pointer;
+}
+
+/* category .html styling start here*/
+.breadcrumb-container { 
+    max-width: 1180px; 
+    margin: 0 auto 20px; 
+    color: #8B96A5; 
+    font-size: 14px;
+    padding-top: 20px;
+}
+.container { display: flex; max-width: 1180px; margin: auto; gap: 20px;
+            align-items: flex-start;
+}
+
+/* Jab 'collapsed' class lag jaye toh content ko hide karo */
+.filter-group.collapsed .filter-content {
+    display: none !important; /* !important lagane se agar koi aur conflict hai toh wo khatam ho jayega */
+}
+
+/* Arrow ko ghumane ke liye */
+.filter-group.collapsed .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Smooth transition ke liye */
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Jab filter-group par collapsed class ho, toh uske andar ki list hide kar do */
+.filter-group.collapsed .filter-list {
+    display: none !important;
+}
+
+/* Arrow rotation (Jo aapne kaha ke ho raha hai, but just in case) */
+.filter-group.collapsed .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+
+
+.sidebar {
+    width: 240px;
+    background: transparent;
+    flex-shrink: 0;
+}
+
+.filter-group {
+    border-top: 1px solid #E3E8EE; /* Top line jaisa screenshot mein hai */
+    padding: 15px 0;
+    margin-bottom: 5px;
+  
+}
+
+/* Heading aur Arrow alignment */
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.filter-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1C1C;
+}
+
+.filter-header i {
+    color: #8B96A5; /* Arrow ka color */
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+/* List items styling */
+.filter-list {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-list li {
+    margin-bottom: 12px;
+}
+
+.filter-list li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #505050; /* Gray color for items */
+    transition: color 0.2s;
+}
+
+.filter-list li a:hover {
+    color: #127FFF;
+}
+
+/* "See all" blue link styling */
+.filter-list .see-all a {
+    color: #0D6EFD;
+    font-weight: 400;
+}
+
+/* Label styling for items */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px; /* Space for checkbox */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #1C1C1C;
+    user-select: none;
+}
+
+/* Hide the default browser checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Custom Checkbox design */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #BDC4CD;
+    border-radius: 5px; /* Thoda rounded corner */
+}
+
+/* When the checkbox is checked, add blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+}
+
+/* See all link inside brands */
+.see-all-blue {
+    color: #0D6EFD;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Price Range Specific Styles */
+.price-input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.input-field {
+    flex: 1;
+}
+
+.input-field label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #1C1C1C;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    color: #BDC4CD; /* Placeholder/Value color from image */
+    font-size: 16px;
+}
+
+/* Range Slider Logic */
+.range-slider {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: #AFD0FF; /* Light blue track */
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Hide default range appearance to style custom thumbs */
+.range-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    appearance: none;
+    -webkit-appearance: none;
+    top: -5px;
+}
+
+/* Range Thumbs (The white circles) */
+.range-slider input[type="range"]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 2px solid #0D6EFD;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Apply Button */
+.apply-btn {
+    width: 100%;
+    background: #FFFFFF;
+    color: #0D6EFD;
+    border: 1px solid #E3E8EE;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.apply-btn:hover {
+    background: #f0f7ff;
+    border-color: #0D6EFD;
+}
+
+/* Radio Container */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #1C1C1C;
+    user-select: none;
+}
+
+/* Hide default radio */
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Custom Radio Circle */
+.radio-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #fff;
+    border: 2px solid #BDC4CD;
+    border-radius: 50%;
+}
+
+/* Blue border when checked */
+.radio-container input:checked ~ .radio-mark {
+    border-color: #0D6EFD;
+}
+
+/* The dot inside (Center circle) */
+.radio-mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show dot when checked */
+.radio-container input:checked ~ .radio-mark:after {
+    display: block;
+}
+
+/* Dot style */
+.radio-container .radio-mark:after {
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #0D6EFD;
+}
+/* Ratings Checkbox Container */
+.rating-checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px; /* Checkbox position for list */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #1C1C1C;
+    user-select: none;
+}
+
+/* Hide default checkbox for custom styling */
+.rating-checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Custom design for Checkbox */
+.rating-checkmark {
+    position: absolute;
+    top: 5px; /* Alignment with list */
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #BDC4CD;
+    border-radius: 5px; /* Rounded corner */
+}
+
+/* When checked, add blue background */
+.rating-checkbox-container input:checked ~ .rating-checkmark {
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+}
+
+/* When unchecked, when hovering, add light background border */
+.rating-checkbox-container:hover input ~ .rating-checkmark {
+    background-color: #f7f9fa;
+}
+
+/* Star coloring from image */
+.stars {
+    display: flex;
+    gap: 3px;
+    color: #FF9017; /* Active star orange color from image */
+    font-size: 16px;
+}
+
+/* Empty or unactive star gray color from image */
+.gray-star {
+    color: #BDC4CD; /* Unactive gray star color from image */
+}
+
+/* Reuse the generic toggle functionality we created earlier for other sections, now it should work on this section too without changing it in JS. The CSS to handle collapse: */
+.filter-group.collapsed .filter-content {
+    display: none !important;
+}
+
+.filter-group.collapsed .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    padding: 12px 20px; /* Thoda padding badha di hai */
+}
+
+.items-count {
+    font-size: 16px;
+    color: #1C1C1C;
+}
+
+/* "Verified only" aur uske baad ke saare elements ko right side par push karne ke liye */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Dropdown, checkbox aur icons ke darmiyan gap */
+    margin-left: auto; /* YEH LINE ZAROORI HAI: Isse left side par maximum space ban jayegi */
+}
+
+/* Dropdown (Featured) Styling */
+.sort-select {
+    padding: 8px 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #1C1C1C;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    min-width: 120px; /* Dropdown ko thoda wide karne ke liye */
+}
+
+/* View buttons (Grid/List) */
+.view-buttons {
+    display: flex;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.view-btn {
+    padding: 8px 12px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    border-right: 1px solid #E3E8EE;
+}
+
+.view-btn:last-child {
+    border-right: none;
+}
+.product-header-container {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.header-left {
+    font-size: 16px;
+    color: #1C1C1C;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Isse sara control right side par chala jayega */
+    gap: 20px; /* Elements ke beech ka space */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkbox-container input { display: none; }
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #BDC4CD;
+    border-radius: 4px;
+    position: relative;
+    background: #fff;
+}
+
+
+.checkbox-container input:checked + .checkmark {
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input:checked + .checkmark:after { display: block; }
+
+/* FEATURED DROPDOWN */
+.sort-wrapper {
+    position: relative;
+}
+
+.featured-select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 8px 35px 8px 12px;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8B96A5; /* Figma arrow color */
+    pointer-events: none;
+}
+
+/* GRID/LIST BUTTONS */
+.layout-toggles {
+    display: flex;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    padding: 8px 12px;
+    background: #fff;
+    border: none;
+    border-right: 1px solid #E3E8EE;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: #EFF2F4; /* Light grey for selected button */
+}
+
+.toggle-btn:last-child { border-right: none; }
+
+
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+.product-card {
+    background: #FFFFFF;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    
+    /* 1. Alignment Tabdeeli: Isse image left par aur content right par aa jayega */
+    display: flex;
+    flex-direction: row; /* Horizontal alignment */
+    align-items: flex-start; /* Items ko upar se top-align karne ke liye */
+    justify-content: flex-start; /* Items ko left-align karne ke liye */
+    gap: 20px; /* Image aur details ke beech ka faasla */
+    
+    transition: 0.3s;
+}
+
+
+.product-img-box {
+    width: 180px; 
+    height: auto; 
+    flex-shrink: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Image aspect ratio maintain karne ke liye */
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Isse saara text left side par stack hoga */
+    text-align: left;        /* Text alignment pakki karne ke liye */
+    flex-grow: 1;
+    padding-top: 5px;        /* Title ko image ke top se level karne ke liye */
+}
+.product-title-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+}
+.product-name {
+    font-size: 18px;
+    color: #1C1C1C;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.wishlist-btn {
+    background: white;
+    border: 1px solid #E3E8EE;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: #0D6EFD;
+    cursor: pointer;
+}
+
+/* Price */
+.price-row {
+    margin-bottom: 8px;
+}
+
+.current-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1C1C1C;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #8B96A5;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Ratings & Shipping */
+.rating-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Stars center se hat kar left par aa jayenge */
+    gap: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.stars-gold { color: #FF9017; }
+.rating-num { color: #FF9017; font-weight: bold; }
+.orders-count { color: #8B96A5; }
+.shipping { color: #00B517; } /* Green color from Image 13 */
+.dot { color: #BDC4CD; }
+
+/* Description */
+.product-desc {
+    color: #505050;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    text-align: left;        /* Agar description center ho rahi hai toh */
+    max-width: 90%;          /* Figma ki tarah clean look ke liye */
+}
+
+.view-details {
+    color: #0D6EFD;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.content-area {
+    display: flex;
+    flex-direction: column; /* Isse header upar aur cards niche ayenge */
+    gap: 20px;             /* Header aur cards ke beech ka faasla */
+    flex-grow: 1;          /* Bachi hui jagah cover karne ke liye */
+}
+
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;             /* Har card ke beech ka faasla */
+    width: 100%;
+}
+
+.products-list.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.products-list.grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 20px;
+    padding: 10px 0;
+}
+
+
+.products-list.grid-view .product-card {
+    background: #fff;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Image section */
+.products-list.grid-view .product-img-box {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #EEEEEE; 
+}
+
+.products-list.grid-view .price-row {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.products-list.grid-view .current-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1C1C1C;
+}
+
+.products-list.grid-view .old-price {
+    font-size: 14px;
+    color: #8B96A5;
+    text-decoration: line-through;
+}
+
+
+.products-list.grid-view .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 8px 0;
+}
+
+.products-list.grid-view .rating-num {
+    color: #FF9017; 
+    font-size: 14px;
+}
+
+
+.products-list.grid-view .product-title {
+    font-size: 14px;
+    color: #505050;
+    line-height: 1.4;
+    font-weight: 400;
+   
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.products-list.grid-view .product-desc,
+.products-list.grid-view .view-details,
+.products-list.grid-view .shipping-text {
+    display: none !important;
+}
+
+
+.products-list.grid-view .wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 1px solid #E3E8EE;
+    background: #fff;
+    padding: 6px;
+    border-radius: 4px;
+    color: #0D6EFD;
+}
+
+
+.products-list.grid-view .shipping-text,
+.products-list.grid-view .order-count {
+    display: none !important;
+}
+
+
+.products-list.grid-view .dot,
+.products-list.grid-view .separator {
+    display: none !important;
+}
+
+.products-list.grid-view .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    margin-bottom: 8px;
+}
+
+
+.products-list.grid-view .orders-count,   
+.products-list.grid-view .shipping,       
+.products-list.grid-view .dot, 
+.products-list.grid-view .product-desc, 
+.products-list.grid-view .view-details {
+    display: none !important;
+}
+
+
+.products-list.grid-view .rating-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 8px 0 !important;
+}
+
+
+.products-list.grid-view .stars-gold {
+    color: #FF9017; /* Orange/Gold color */
+    font-size: 14px;
+}
+
+/*  Product Name / Title styling */
+.products-list.grid-view .product-name {
+    font-size: 16px;
+    color: #505050;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 5px;
+   
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*  Wishlist Button Position */
+.products-list.grid-view .product-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: flex-end; /* Sab kuch right side par push karne ke liye */
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* "Show 10" Dropdown Styling */
+.show-count {
+    position: relative;
+    display: inline-block;
+}
+
+.show-count select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px 35px 10px 15px;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    color: #1C1C1C;
+}
+
+.pagination-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8B96A5;
+    pointer-events: none;
+    font-size: 12px;
+}
+
+/* Pagination Buttons Styling */
+.pagination-buttons {
+    display: flex;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.page-num, .page-nav {
+    padding: 10px 16px;
+    border: none;
+    background: #fff;
+    border-right: 1px solid #E3E8EE;
+    cursor: pointer;
+    font-size: 16px;
+    color: #1C1C1C;
+    transition: 0.2s;
+}
+
+.page-nav:last-child {
+    border-right: none;
+}
+
+/* Active Page Style (Blue background or Grey ) */
+.page-num.active {
+    background: #EFF2F4; /* Light grey jaisa image mein hai */
+    color: #8B96A5;
+    cursor: default;
+}
+
+.page-num:hover:not(.active), .page-nav:hover {
+    background: #F7FAFC;
+}
+
+
+
