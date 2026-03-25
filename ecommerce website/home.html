@@ -21,6 +21,23 @@
 </head>
 <body>
 
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<div id="categorySidebar" class="category-sidebar">
+    <div class="sidebar-header">
+        <h3>Categories</h3>
+        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    </div>
+    <ul class="sidebar-list">
+        <li><a href="category.html">Mobile accessory</a></li>
+        <li><a href="category.html">Electronics</a></li>
+        <li><a href="category.html">Smartphones</a></li>
+        <li><a href="category.html">Modern tech</a></li>
+        </ul>
+</div>
+
+
+
 <!--Header Start Here-->
     <header>
     <div class="header-container">
@@ -64,10 +81,10 @@
 <nav class="sub-header">
     <div class="nav-container">
         <div class="nav-links">
-            <div class="nav-item">
-                <span class="material-symbols-outlined">menu</span>
-                <span class="text-bold">All category</span>
-            </div>
+            <div class="nav-item" id="menuBtn" onclick="openSidebar()" style="cursor: pointer;">
+    <span class="material-symbols-outlined">menu</span>
+    <span class="text-bold">All category</span>
+</div>
             <a href="#" class="nav-link">Hot offers</a>
             <a href="#" class="nav-link">Gift boxes</a>
             <a href="#" class="nav-link">Projects</a>
@@ -110,6 +127,556 @@
 </nav>
 <!--nav tag end here-->
 
+<!--hero section start here-->
+<main class="hero-section">
+    <div class="hero-container">
+        
+        <aside class="sidebar">
+            <ul>
+                <li class="active"><a href="category.html">Automobiles</a></li>
+                <li><a href="category.html">Clothes and wear</a></li>
+                <li><a href="category.html">Home interiors</a></li>
+                <li><a href="category.html">Computer and tech</a></li>
+                <li><a href="category.html">Tools, equipments</a></li>
+                <li><a href="category.html">Sports and outdoor</a></li>
+                <li><a href="category.html">Animal and pets</a></li>
+                <li><a href="category.html">Machinery tools</a></li>
+                <li>More category</li>
+            </ul>
+        </aside>
+
+        <div class="main-banner">
+            <div class="banner-content">
+                <p>Latest trending</p>
+                <h2>Electronic items</h2>
+                <button class="banner-btn"><a href="category.html">Learn more</a></button>
+            </div>
+            </div>
+
+        <div class="right-cards">
+            <div class="user-card">
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40" alt="UserAvatar" class="avatar">
+                    <p>Hi, user<br>let's get stated</p>
+                </div>
+                <button class="btn-blue">Join now</button>
+                <button class="btn-white">Log in</button>
+            </div>
+
+            <div class="promo-card orange">
+                <p>Get US $10 off with a new supplier</p>
+            </div>
+
+            <div class="promo-card teal">
+                <p>Send quotes with supplier preferences</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+<!--hero section end here -->
+
+<!--deals container start here -->
+<section class="deals-container">
+    <div class="deals-info">
+        <h3>Deals and offers</h3>
+        <p>Hygiene equipments</p>
+        <div class="countdown">
+    <div class="time-box">
+        <span class="num">04</span>
+        <p class="label">Days</p>
+    </div>
+    <div class="time-box">
+        <span class="num">13</span>
+        <p class="label">Hour</p>
+    </div>
+    <div class="time-box">
+        <span class="num">34</span>
+        <p class="label">Min</p>
+    </div>
+    <div class="time-box">
+        <span class="num">56</span>
+        <p class="label">Sec</p>
+    </div>
+</div>
+    </div>
+    <div class="deals-products">
+        <div class="deal-item">
+            <img src="assets/Image/tech/8.png" alt="Watch">
+            <p>Smart watches</p>
+            <span class="badge">-25%</span>
+        </div>
+
+        <div class="deal-item">
+            <img src="assets/Image/tech/image 34.png" alt="Laptop">
+            <p>Laptops</p>
+            <span class="badge">-15%</span>
+        </div>
+
+        <div class="deal-item">
+            <img src="assets/Image/tech/6.png" alt="Watch">
+            <p>GoPro camera</p>
+            <span class="badge">-40%</span>
+        </div>
+
+        <div class="deal-item">
+            <img src="assets/Image/tech/image 29.png" alt="Watch">
+            <p>Headphones</p>
+            <span class="badge">-25%</span>
+        </div>
+
+        <div class="deal-item">
+            <img src="assets/Image/tech/image 23.png" alt="Watch">
+            <p>Canon cameras</p>
+            <span class="badge">-25%</span>
+        </div>
+        </div>
+</section>
+<!--deals container end here -->
+
+<!--category-section start here -->
+<section class="home-outdoor-section">
+    <div class="category-container">
+        <div class="side-banner">
+            <h3>Home and <br> outdoor</h3>
+            <button class="source-btn">Source now</button>
+        </div>
+
+        <div class="product-flex-grid">
+            
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Soft chairs</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/interior/1.png" alt="Chair">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Sofa & chair</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/interior/6.png" alt="Sofa">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Kitchen dishes</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/interior/image 93.png" alt="Dishes">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Smart watches</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/interior/3.png" alt="Pot">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Kitchen mixer</p>
+                    <p class="price">From <br><span>USD 100</span></p>
+                </div>
+                <img src="assets/Image/interior/9.png" alt="Mixer">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Blenders</p>
+                    <p class="price">From <br><span>USD 39</span></p>
+                </div>
+                <img src="assets/Image/interior/8.png" alt="Blender">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Home appliance</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/interior/7.png" alt="Appliance">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Coffee maker</p>
+                    <p class="price">From <br><span>USD 10</span></p>
+                </div>
+                <img src="assets/Image/interior/image 89.png" alt="Plant">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--category-section end here -->
+
+<!--electronic-section start here -->
+<section class="home-outdoor-section">
+    <div class="category-container">
+        <div class="side-banner1">
+            <h3>Consumer <br> electronics and <br> gadgets</h3>
+            <button class="source-btn">Source now</button>
+        </div>
+
+        <div class="product-flex-grid">
+            
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Smart watches</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/tech/8.png" alt="watches">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Camerasr</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/tech/6.png" alt="cameras">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Head phones</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/tech/image 86.png" alt="Headphones">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Smart watches</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/tech/image 85.png" alt="Kattle">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Gaming set</p>
+                    <p class="price">From <br><span>USD 100</span></p>
+                </div>
+                <img src="assets/Image/tech/image 29.png" alt="Mixer">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Laptop & PC</p>
+                    <p class="price">From <br><span>USD 340</span></p>
+                </div>
+                <img src="assets/Image/tech/image 34.png" alt="Laptop">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Smartphones</p>
+                    <p class="price">From <br><span>USD 19</span></p>
+                </div>
+                <img src="assets/Image/tech/image 32.png" alt="phone">
+            </div>
+
+            <div class="product-item">
+                <div class="item-details">
+                    <p class="title">Electric Kattler</p>
+                    <p class="price">From <br><span>USD 240</span></p>
+                </div>
+                <img src="assets/Image/tech/image 33.png" alt="Kattle">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--electronic-section end here -->
+
+<!--inquiry-section start here -->
+<section class="inquiry-section">
+    <div class="inquiry-banner-bg">
+        <div class="inquiry-flex-container">
+            <div class="inquiry-text">
+                <h2>An easy way to send <br> requests to all suppliers</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing <br> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="inquiry-card">
+                <h3>Send quote to suppliers</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="What item you need?">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Type more details"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <input type="number" placeholder="Quantity">
+                        <select>
+                            <option>Pcs</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="blue-btn">Send inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--inquiry-section end here -->
+
+
+<!--recommended section start here-->
+<section class="recommended-section">
+    <h3 class="section-title">Recommended items</h3>
+    
+    <div class="recommend-grid">
+        <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/cloth/Bitmap.png" alt="T-shirt">
+            </div>
+            <div class="card-info">
+                <p class="price">$10.30</p>
+                <p class="desc">T-shirts with multiple colors, for men</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/cloth/2 1.png" alt="Jacket">
+            </div>
+            <div class="card-info">
+                <p class="price">$10.30</p>
+                <p class="desc">Jeans shorts for men blue color</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/cloth/image 30.png" alt="Suit">
+            </div>
+            <div class="card-info">
+                <p class="price">$12.50</p>
+                <p class="desc">Brown winter coat medium size</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/cloth/image 24.png" alt="Suit">
+            </div>
+            <div class="card-info">
+                <p class="price">$12.50</p>
+                <p class="desc">Brown winter coat medium size</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/cloth/image 26.png" alt="Suit">
+            </div>
+            <div class="card-info">
+                <p class="price">$12.50</p>
+                <p class="desc">Brown winter coat medium size</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/cloth/Bitmap (2).png" alt="Suit">
+            </div>
+            <div class="card-info">
+                <p class="price">$12.50</p>
+                <p class="desc">Brown winter coat medium size</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/tech/image 86.png" alt="Suit">
+            </div>
+            <div class="card-info">
+                <p class="price">$12.50</p>
+                <p class="desc">Brown winter coat medium size</p>
+            </div>
+        </div>
+
+                <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/cloth/image 26.png" alt="Suit">
+            </div>
+            <div class="card-info">
+                <p class="price">$12.50</p>
+                <p class="desc">Brown winter coat medium size</p>
+            </div>
+        </div>
+
+                <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/interior/image 90.png" alt="Suit">
+            </div>
+            <div class="card-info">
+                <p class="price">$12.50</p>
+                <p class="desc">Brown winter coat medium size</p>
+            </div>
+        </div>
+
+                <div class="product-card">
+            <div class="img-box">
+                <img src="assets/Layout/alibaba/Image/tech/image 85.png" alt="Suit">
+            </div>
+            <div class="card-info">
+                <p class="price">$12.50</p>
+                <p class="desc">Brown winter coat medium size</p>
+            </div>
+        </div>
+        
+        </div>
+</section>
+<!--recommended section end here-->
+
+<!--extra service start here-->
+<section class="extra-services">
+    <h3 class="section-title">Our extra services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-img">
+                <img src="assets/Image/backgrounds/Mask group.png" alt="Industry Hubs">
+                <div class="service-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="service-body">
+                <p>Source from <br> Industry Hubs</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-img">
+                <img src="assets/Image/backgrounds/Mask group (1).png" alt="Customize">
+                <div class="service-icon">
+                    <i class="fa-solid fa-box-archive"></i>
+                </div>
+            </div>
+            <div class="service-body">
+                <p>Customize Your <br> Products</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-img">
+                <img src="assets/Image/backgrounds/image 106.png" alt="Shipping">
+                <div class="service-icon">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+            </div>
+            <div class="service-body">
+                <p>Fast, reliable shipping <br> by ocean or air</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-img">
+                <img src="assets/Image/backgrounds/image 107.png" alt="Monitoring">
+                <div class="service-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+            </div>
+            <div class="service-body">
+                <p>Product monitoring <br> and inspection</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--extra service end here-->
+
+
+<!--region section start here-->
+<section class="region-section">
+    <h3 class="section-title">Suppliers by region</h3>
+    
+    <div class="region-grid">
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/AE@2x.png" alt="UAE" class="flag-icon">
+            <div class="region-info">
+                <p class="country">Arabic Emirates</p>
+                <p class="site">shopname.ae</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/icon.png" alt="Australia" class="flag-icon">
+            <div class="region-info">
+                <p class="country">Australia</p>
+                <p class="site">shopname.ae</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/US@2x.png" alt="USA" class="flag-icon">
+            <div class="region-info">
+                <p class="country">United States</p>
+                <p class="site">shopname.ae</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/RU@2x.png" alt="Russia" class="flag-icon">
+            <div class="region-info">
+                <p class="country">Russia</p>
+                <p class="site">shopname.ru</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/IT@2x.png" alt="Italy" class="flag-icon">
+            <div class="region-info">
+                <p class="country">Italy</p>
+                <p class="site">shopname.it</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/DK@2x.png" alt="Denmark" class="flag-icon">
+            <div class="region-info">
+                <p class="country">Denmark</p>
+                <p class="site">denmark.com.dk</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/FR@2x.png" alt="France" class="flag-icon">
+            <div class="region-info">
+                <p class="country">France</p>
+                <p class="site">shopname.com.fr</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/AE@2x.png" alt="UAE" class="flag-icon">
+            <div class="region-info">
+                <p class="country">Arabic Emirates</p>
+                <p class="site">shopname.ae</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/CN@2x.png" alt="China" class="flag-icon">
+            <div class="region-info">
+                <p class="country">China</p>
+                <p class="site">shopname.ae</p>
+            </div>
+        </div>
+
+        <div class="region-item">
+            <img src="assets/Layout1/Image/flags/GB@2x.png" alt="Great Britain" class="flag-icon">
+            <div class="region-info">
+                <p class="country">Great Britain</p>
+                <p class="site">shopname.co.uk</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--region section end here-->
 
 <!--footer start here-->
 <footer>
@@ -198,5 +765,7 @@
     </div>
 </footer>
 <!--footer end here-->
+
+<script src="script.js"></script>
 </body>
 </html>
