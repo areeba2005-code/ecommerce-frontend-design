@@ -16,10 +16,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.x.x/css/all.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Brand</title>
 </head>
 <body>
+
+     <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<div id="categorySidebar" class="category-sidebar">
+    <div class="sidebar-header">
+        <h3>Categories</h3>
+        <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    </div>
+    <ul class="sidebar-list">
+        <li><a href="category.html">Mobile accessory</a></li>
+        <li><a href="category.html">Electronics</a></li>
+        <li><a href="category.html">Smartphones</a></li>
+        <li><a href="category.html">Modern tech</a></li>
+        </ul>
+</div>
 
 <!--Header Start Here-->
     <header>
@@ -64,10 +81,10 @@
 <nav class="sub-header">
     <div class="nav-container">
         <div class="nav-links">
-            <div class="nav-item">
-                <span class="material-symbols-outlined">menu</span>
-                <span class="text-bold">All category</span>
-            </div>
+            <div class="nav-item" id="menuBtn" onclick="openSidebar()" style="cursor: pointer;">
+    <span class="material-symbols-outlined">menu</span>
+    <span class="text-bold">All category</span>
+</div>
             <a href="#" class="nav-link">Hot offers</a>
             <a href="#" class="nav-link">Gift boxes</a>
             <a href="#" class="nav-link">Projects</a>
@@ -109,6 +126,516 @@
     </div>
 </nav>
 <!--nav tag end here-->
+
+<div class="breadcrumb-container">
+    <p>Home > Clothings > Men's wear > Summer clothing</p>
+</div>
+
+<div class="container">
+    <aside class="sidebar">
+        <div class="filter-group">
+    <div class="filter-header" onclick="toggleFilter(this)">
+        <h4>Category</h4>
+        <i class="fa-solid fa-chevron-up toggle-icon"></i> </div>
+    <ul class="filter-list">
+        <li><a href="#">Mobile accessory</a></li>
+        <li><a href="#">Electronics</a></li>
+        <li><a href="#">Smartphones</a></li>
+        <li><a href="#">Modern tech</a></li>
+        <li class="see-all"><a href="#">See all</a></li>
+    </ul>
+        </div>
+        <!--Brands-->
+        <div class="filter-group">
+    <div class="filter-header" onclick="toggleFilter(this)">
+        <h4>Brands</h4>
+        <i class="fa-solid fa-chevron-up toggle-icon"></i>
+    </div>
+    <div class="filter-content">
+        <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Samsung
+</label>
+        
+        <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Apple
+</label>
+        
+       <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Huwaie
+</label>
+        
+       <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Pocco
+</label>
+        
+      <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Lenovo
+</label>
+
+        <p class="see-all-blue">See all</p>
+    </div>
+        </div>
+
+        <!--features-->
+                <div class="filter-group">
+    <div class="filter-header" onclick="toggleFilter(this)" >
+        <h4>Features</h4>
+        <i class="fa-solid fa-chevron-up toggle-icon"></i>
+    </div>
+    <div class="filter-content">
+     <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Mettalic
+</label>
+        
+     <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Plastic cover
+</label>
+       <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    8GB RAM
+</label>
+        
+       <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Super power
+</label>
+        
+     <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    Large Memory
+</label>
+
+        <p class="see-all-blue">See all</p>
+    </div>
+        </div>
+
+        <!--price range-->
+        <div class="filter-group">
+    <div class="filter-header" onclick="toggleFilter(this)">
+        <h4>Price range</h4>
+        <i class="fa-solid fa-chevron-up toggle-icon"></i>
+    </div>
+    <div class="filter-content">
+        <div class="range-slider">
+            <input type="range" class="min-range" min="0" max="999999" value="0">
+            <input type="range" class="max-range" min="0" max="999999" value="999999">
+            <div class="slider-track"></div>
+        </div>
+
+        <div class="price-input-container">
+            <div class="input-field">
+                <label>Min</label>
+                <input type="number" value="0" placeholder="0">
+            </div>
+            <div class="input-field">
+                <label>Max</label>
+                <input type="number" value="999999" placeholder="999999">
+            </div>
+        </div>
+
+        <button class="apply-btn">Apply</button>
+    </div>
+        </div>
+
+        <!--condition-->
+        <div class="filter-group">
+    <div class="filter-header" onclick="toggleFilter(this)">
+        <h4>Condition</h4>
+        <i class="fa-solid fa-chevron-up toggle-icon"></i>
+    </div>
+    <div class="filter-content">
+        <label class="radio-container">Any
+            <input type="radio" checked="checked" name="condition">
+            <span class="radio-mark"></span>
+        </label>
+        
+        <label class="radio-container">Refurbished
+            <input type="radio" name="condition">
+            <span class="radio-mark"></span>
+        </label>
+        
+        <label class="radio-container">Brand new
+            <input type="radio" name="condition">
+            <span class="radio-mark"></span>
+        </label>
+        
+        <label class="radio-container">Old items
+            <input type="radio" name="condition">
+            <span class="radio-mark"></span>
+        </label>
+    </div>
+</div>
+
+        <!--rating-->
+ <div class="filter-group"> <div class="filter-header" onclick="toggleFilter(this)">
+        <h4>Ratings</h4>
+        <i class="fa-solid fa-chevron-up toggle-icon"></i>
+    </div>
+    <div class="filter-content">
+        <label class="rating-checkbox-container">
+            <input type="checkbox">
+            <span class="rating-checkmark"></span>
+            <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </span>
+        </label>
+        
+        <label class="rating-checkbox-container">
+            <input type="checkbox">
+            <span class="rating-checkmark"></span>
+            <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star gray-star"></i>
+            </span>
+        </label>
+
+        <label class="rating-checkbox-container">
+            <input type="checkbox">
+            <span class="rating-checkmark"></span>
+            <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star gray-star"></i>
+                <i class="fa-regular fa-star gray-star"></i>
+            </span>
+        </label>
+        
+        <label class="rating-checkbox-container">
+            <input type="checkbox">
+            <span class="rating-checkmark"></span>
+            <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star gray-star"></i>
+                <i class="fa-regular fa-star gray-star"></i>
+                <i class="fa-regular fa-star gray-star"></i>
+            </span>
+        </label>
+        
+        </div>
+</div>
+    </aside>
+
+<main class="content-area">
+        <div class="product-header-container">
+    <div class="header-left">
+        12,911 items in <strong>Mobile accessory</strong>
+    </div>
+
+    <div class="header-right">
+        <label class="checkbox-container">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+            Verified only
+        </label>
+
+        <div class="sort-wrapper">
+            <select class="featured-select">
+                <option>Featured</option>
+            </select>
+            <i class="fa-solid fa-chevron-down custom-arrow"></i>
+        </div>
+
+<div class="layout-toggles">
+    <button id="grid-btn" class="toggle-btn" onclick="toggleView('grid')">
+        <i class="fa-solid fa-grip"></i>
+    </button>
+    <button id="list-btn" class="toggle-btn active" onclick="toggleView('list')">
+        <i class="fa-solid fa-list"></i>
+    </button>
+</div>
+    </div>
+</div>
+
+<div id="products-wrapper" class="products-list list-view">
+    <div class="product-card">
+    <div class="product-img-box">
+        <img src="assets/Image/tech/image 33.png" alt="Product Image"> </div>
+
+    <div class="product-info">
+        <div class="product-title-row">
+            <h3 class="product-name">Canon Cmera EOS 2000, Black 10x zoom</h3>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="price-row">
+            <span class="current-price">$998.00</span>
+            <span class="old-price">$1128.00</span>
+        </div>
+
+        <div class="rating-row">
+            <div class="stars-gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="rating-num">7.5</span>
+            <span class="dot">•</span>
+            <span class="orders-count">154 orders</span>
+            <span class="dot">•</span>
+            <span class="shipping">Free Shipping</span>
+        </div>
+
+        <p class="product-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua
+        </p>
+
+        <a href="#" class="view-details">View details</a>
+    </div>
+</div>
+
+   <div class="product-card">
+    <div class="product-img-box">
+        <img src="assets/Image/tech/image 23.png" alt="Product Image"> </div>
+
+    <div class="product-info">
+        <div class="product-title-row">
+            <h3 class="product-name">GoPro HERO6 4K Action Camera - Black</h3>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="price-row">
+            <span class="current-price">$998.00</span>
+            
+        </div>
+
+        <div class="rating-row">
+            <div class="stars-gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="rating-num">7.5</span>
+            <span class="dot">•</span>
+            <span class="orders-count">154 orders</span>
+            <span class="dot">•</span>
+            <span class="shipping">Free Shipping</span>
+        </div>
+
+        <p class="product-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua
+        </p>
+
+        <a href="#" class="view-details">View details</a>
+    </div>
+</div>
+
+   <div class="product-card">
+    <div class="product-img-box">
+        <img src="assets/Image/tech/image 32.png" alt="Product Image"> </div>
+
+    <div class="product-info">
+        <div class="product-title-row">
+            <h3 class="product-name">Canon Cmera EOS 2000, Black 10x zoom</h3>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="price-row">
+            <span class="current-price">$998.00</span>
+            <span class="old-price">$1128.00</span>
+        </div>
+
+        <div class="rating-row">
+            <div class="stars-gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="rating-num">7.5</span>
+            <span class="dot">•</span>
+            <span class="orders-count">154 orders</span>
+            <span class="dot">•</span>
+            <span class="shipping">Free Shipping</span>
+        </div>
+
+        <p class="product-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua
+        </p>
+
+        <a href="#" class="view-details">View details</a>
+    </div>
+</div>
+
+   <div class="product-card">
+    <div class="product-img-box">
+        <img src="assets/Image/tech/image 34.png" alt="Product Image"> </div>
+
+    <div class="product-info">
+        <div class="product-title-row">
+            <h3 class="product-name">Canon Cmera EOS 2000, Black 10x zoom</h3>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="price-row">
+            <span class="current-price">$998.00</span>
+            <span class="old-price">$1128.00</span>
+        </div>
+
+        <div class="rating-row">
+            <div class="stars-gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="rating-num">7.5</span>
+            <span class="dot">•</span>
+            <span class="orders-count">154 orders</span>
+            <span class="dot">•</span>
+            <span class="shipping">Free Shipping</span>
+        </div>
+
+        <p class="product-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua
+        </p>
+
+        <a href="#" class="view-details">View details</a>
+    </div>
+</div>
+
+   <div class="product-card">
+    <div class="product-img-box">
+        <img src="assets/Image/tech/8.png" alt="Product Image"> </div>
+
+    <div class="product-info">
+        <div class="product-title-row">
+            <h3 class="product-name">Canon Cmera EOS 2000, Black 10x zoom</h3>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="price-row">
+            <span class="current-price">$998.00</span>
+            <span class="old-price">$1128.00</span>
+        </div>
+
+        <div class="rating-row">
+            <div class="stars-gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="rating-num">7.5</span>
+            <span class="dot">•</span>
+            <span class="orders-count">154 orders</span>
+            <span class="dot">•</span>
+            <span class="shipping">Free Shipping</span>
+        </div>
+
+        <p class="product-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua
+        </p>
+
+        <a href="#" class="view-details">View details</a>
+    </div>
+</div>
+
+   <div class="product-card">
+    <div class="product-img-box">
+        <img src="assets/Image/tech/image 86.png" alt="Product Image"> </div>
+
+    <div class="product-info">
+        <div class="product-title-row">
+            <h3 class="product-name">Canon Cmera EOS 2000, Black 10x zoom</h3>
+            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="price-row">
+            <span class="current-price">$998.00</span>
+            <span class="old-price">$1128.00</span>
+        </div>
+
+        <div class="rating-row">
+            <div class="stars-gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="rating-num">7.5</span>
+            <span class="dot">•</span>
+            <span class="orders-count">154 orders</span>
+            <span class="dot">•</span>
+            <span class="shipping">Free Shipping</span>
+        </div>
+
+        <p class="product-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua
+        </p>
+
+        <a href="#" class="view-details">View details</a>
+    </div>
+</div>
+
+
+</div>
+
+<div class="pagination-container">
+    <div class="show-count">
+        <select>
+            <option>Show 10</option>
+            <option>Show 20</option>
+            <option>Show 30</option>
+        </select>
+        <i class="fa-solid fa-chevron-down pagination-arrow"></i>
+    </div>
+
+    <div class="pagination-buttons">
+        <button class="page-nav"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="page-num active">1</button>
+        <button class="page-num">2</button>
+        <button class="page-num">3</button>
+        <button class="page-nav"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</div>
+</main>
+
+
+
+
+
+</div>   
+
 
 
 <!--footer start here-->
@@ -198,5 +725,6 @@
     </div>
 </footer>
 <!--footer end here-->
+<script src="script.js"></script>
 </body>
 </html>
