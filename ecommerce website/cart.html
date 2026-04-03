@@ -28,16 +28,6 @@
             <img src="assets/Layout/Brand/logo-colored.png" alt="Brand Logo">
         </div>
 
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search">
-            <select class="category-select">
-                <option>All category</option>
-                <option>Electronics</option>
-                <option>Clothes</option>
-            </select>
-            <button class="search-btn">Search</button>
-        </div>
-
         <div class="action-group">
             <div class="icon-item">
                 <span class="material-symbols-outlined">person</span>
@@ -52,7 +42,7 @@
                 <p>Orders</p>
             </div>
             <div class="icon-item">
-                <span class="material-symbols-outlined">shopping_cart</span>
+                <span class="material-symbols-outlined"><a href="#">shopping_cart</a></span>
                 <p>My cart</p>
             </div>
         </div>
@@ -60,70 +50,226 @@
 </header>
 <!--Header tag end here-->
 
-<!--nav tag start here-->
-<nav class="sub-header">
-    <div class="nav-container">
-        <div class="nav-links">
-            <div class="nav-item">
-                <span class="material-symbols-outlined">menu</span>
-                <span class="text-bold">All category</span>
+<div class="main-page-wrapper">
+    <div class="cart-left-section">
+        <h3 class="cart-title">My cart (3)</h3>
+        <main class="cart-container">
+    <div class="cart-item">
+        <div class="product-info">
+            <div class="img-product">
+                <img src="assets/Layout/alibaba/Image/cloth/image 26.png" alt="T-shirt">
             </div>
-            <a href="#" class="nav-link">Hot offers</a>
-            <a href="#" class="nav-link">Gift boxes</a>
-            <a href="#" class="nav-link">Projects</a>
-            <a href="#" class="nav-link">Menu item</a>
-            <div class="nav-item">
-                <span>Help</span>
-                <span class="material-symbols-outlined dropdown-small">expand_more</span>
+            <div class="text-detail">
+                <p class="item-name">T-shirts with multiple colors, for men and lady</p>
+                <p class="item-meta">Size: medium, Color: blue, Material: Plastic</p>
+                <p class="item-seller">Seller: Artel Market</p>
+                <div class="item-actions">
+                    <button class="remove-btn">Remove</button>
+                    <button class="save-btn">Save for later</button>
+                </div>
             </div>
         </div>
-
-<div class="nav-settings">
-    
-    <div class="dropdown-item">
-        <div class="nav-item">
-            <span>English, USD</span>
-            <span class="material-symbols-outlined dropdown-small">expand_more</span>
+        
+        <div class="price-qty-section">
+            <p class="item-price">$78.99</p>
+            <select class="qty-dropdown">
+                <option>Qty: 9</option>
+                <option>Qty: 1</option>
+            </select>
         </div>
-        <ul class="dropdown-menu">
-            <li><a href="#">Arabic, AED</a></li>
-            <li><a href="#">French, EUR</a></li>
-            <li><a href="#">Chinese, CNY</a></li>
-        </ul>
     </div>
 
-    <div class="dropdown-item">
-        <div class="nav-item">
-            <span>Ship to</span>
-            <img src="https://flagcdn.com/w20/de.png" alt="Germany" class="flag-icon">
-            <span class="material-symbols-outlined dropdown-small">expand_more</span>
+      <div class="cart-item">
+        <div class="product-info">
+            <div class="img-product">
+                <img src="assets/Layout/alibaba/Image/cloth/image 26.png" alt="T-shirt">
+            </div>
+            <div class="text-detail">
+                <p class="item-name">T-shirts with multiple colors, for men and lady</p>
+                <p class="item-meta">Size: medium, Color: blue, Material: Plastic</p>
+                <p class="item-seller">Seller: Artel Market</p>
+                <div class="item-actions">
+                    <button class="remove-btn">Remove</button>
+                    <button class="save-btn">Save for later</button>
+                </div>
+            </div>
         </div>
-        <ul class="dropdown-menu">
-            <li><img src="https://flagcdn.com/w20/us.png"> United States</li>
-            <li><img src="https://flagcdn.com/w20/pk.png"> Pakistan</li>
-            <li><img src="https://flagcdn.com/w20/ae.png"> UAE</li>
-        </ul>
+        
+        <div class="price-qty-section">
+            <p class="item-price">$78.99</p>
+            <select class="qty-dropdown">
+                <option>Qty: 9</option>
+                <option>Qty: 1</option>
+            </select>
+        </div>
     </div>
 
+      <div class="cart-item">
+        <div class="product-info">
+            <div class="img-product">
+                <img src="assets/Layout/alibaba/Image/cloth/image 26.png" alt="T-shirt">
+            </div>
+            <div class="text-detail">
+                <p class="item-name">T-shirts with multiple colors, for men and lady</p>
+                <p class="item-meta">Size: medium, Color: blue, Material: Plastic</p>
+                <p class="item-seller">Seller: Artel Market</p>
+                <div class="item-actions">
+                    <button class="remove-btn">Remove</button>
+                    <button class="save-btn">Save for later</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="price-qty-section">
+            <p class="item-price">$78.99</p>
+            <select class="qty-dropdown">
+                <option>Qty: 9</option>
+                <option>Qty: 1</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="cart-footer">
+        <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to shop</button>
+        <button class="remove-all-btn">Remove all</button>
+    </div>
+
+
+</main>
+    </div>
+        <main class="checkout-sidebar">
+    <div class="coupon-container">
+        <p class="coupon-label">Have a coupon?</p>
+        <div class="coupon-input-group">
+            <input type="text" placeholder="Add coupon" class="coupon-input">
+            <button class="coupon-apply-btn">Apply</button>
+        </div>
+    </div>
+
+    <div class="summary-container">
+        <div class="summary-row">
+            <span>Subtotal:</span>
+            <span>$1403.97</span>
+        </div>
+        <div class="summary-row discount">
+            <span>Discount:</span>
+            <span class="text-red">- $60.00</span>
+        </div>
+        <div class="summary-row tax">
+            <span>Tax:</span>
+            <span class="text-green">+ $14.00</span>
+        </div>
+        
+        <hr class="summary-divider">
+
+        <div class="summary-row total">
+            <strong>Total:</strong>
+            <strong>$1357.97</strong>
+        </div>
+
+        <button class="checkout-btn">Checkout</button>
+
+        <div class="payment-methods">
+            <img src="assets/american express.png" alt="Amex">
+            <img src="assets/master card.png" alt="Mastercard">
+            <img src="assets/paypal.png" alt="Paypal">
+            <img src="assets/visa.webp" alt="Visa">
+            <img src="assets/applepay.png" alt="Apple Pay">
+        </div>
+    </div>
+    </main>
 </div>
+
+<section class="features-bar">
+    <div class="feature-item">
+        <div class="icon-circle">
+            <i class="fas fa-lock"></i> </div>
+        <div class="feature-text">
+            <p class="feature-title">Secure payment</p>
+            <p class="feature-desc">Have you ever finally just</p>
+        </div>
     </div>
-</nav>
-<!--nav tag end here-->
 
+    <div class="feature-item">
+        <div class="icon-circle">
+            <i class="fas fa-comment-dots"></i> </div>
+        <div class="feature-text">
+            <p class="feature-title">Customer support</p>
+            <p class="feature-desc">Have you ever finally just</p>
+        </div>
+    </div>
 
+    <div class="feature-item">
+        <div class="icon-circle">
+            <i class="fas fa-truck"></i> </div>
+        <div class="feature-text">
+            <p class="feature-title">Free delivery</p>
+            <p class="feature-desc">Have you ever finally just</p>
+        </div>
+    </div>
+</section>
+
+<section class="saved-later-section">
+    <h3 class="saved-title">Saved for later</h3>
+    
+    <div class="saved-grid">
+        <div class="saved-card">
+            <div class="saved-img-box">
+                <img src="assets/Image/tech/image 33.png" alt="Tablet">
+            </div>
+            <p class="saved-price">$99.50</p>
+            <p class="saved-name">GoPro HERO6 4K Action Camera - Black</p>
+            <button class="move-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Move to cart
+            </button>
+        </div>
+
+        <div class="saved-card">
+            <div class="saved-img-box">
+                <img src="assets/Image/tech/image 85.png" alt="Phone">
+            </div>
+            <p class="saved-price">$99.50</p>
+            <p class="saved-name">GoPro HERO6 4K Action Camera - Black</p>
+            <button class="move-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Move to cart
+            </button>
+        </div>
+
+                <div class="saved-card">
+            <div class="saved-img-box">
+                <img src="assets/Image/tech/image 85.png" alt="Phone">
+            </div>
+            <p class="saved-price">$99.50</p>
+            <p class="saved-name">GoPro HERO6 4K Action Camera - Black</p>
+            <button class="move-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Move to cart
+            </button>
+        </div>
+
+                <div class="saved-card">
+            <div class="saved-img-box">
+                <img src="assets/Image/tech/image 85.png" alt="Phone">
+            </div>
+            <p class="saved-price">$99.50</p>
+            <p class="saved-name">GoPro HERO6 4K Action Camera - Black</p>
+            <button class="move-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Move to cart
+            </button>
+        </div>
+
+        </div>
+</section>
+
+<div class="discount-banner">
+    <div class="banner-text">
+        <h2>Super discount on more than 100 USD</h2>
+        <p>Have you ever finally just write dummy info</p>
+    </div>
+    <button class="shop-now-btn">Shop now</button>
+</div>
 <!--footer start here-->
 <footer>
-    <div class="newsletter">
-        <h3>Subscribe on our newsletter</h3>
-        <p>Get daily news on upcoming offers from many suppliers all over the world</p>
-        <form class="subscribe-form">
-            <div class="input-group">
-                <span class="material-symbols-outlined mail-icon">mail</span>
-                <input type="email" placeholder="Email" required>
-            </div>
-            <button type="submit">Subscribe</button>
-        </form>
-    </div>
+
 
     <div class="footer-main">
         <div class="footer-container">
